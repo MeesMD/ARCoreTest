@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class clearLines : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject renderObject;
+
+    private GameObject[] linePoints; 
+
+    public void ClearLines()
     {
+        linePoints = renderObject.GetComponentsInChildren<GameObject>();
         
+        for(int i = 0; i < 1; i++)
+        {
+            Destroy(linePoints[i]);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

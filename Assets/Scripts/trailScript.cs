@@ -35,11 +35,4 @@ public class trailScript : MonoBehaviour
             cur.transform.SetParent(this.transform);
         }
     }
-
-    public void ClearLines()
-    {
-        Debug.Log("Going to clear all lines");
-        
-        Debug.Log("Cleared all lines ");
-    }
 }

@@ -155,6 +155,21 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114451889682527732, guid: c10877f7cd5764de18d46d7b777d1faa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963366853050710, guid: c10877f7cd5764de18d46d7b777d1faa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114876698896786350, guid: c10877f7cd5764de18d46d7b777d1faa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c10877f7cd5764de18d46d7b777d1faa, type: 3}
 --- !u!1 &97747991 stripped
@@ -941,6 +956,7 @@ GameObject:
   - component: {fileID: 1233457658}
   - component: {fileID: 1233457657}
   - component: {fileID: 1233457660}
+  - component: {fileID: 1233457661}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1008,7 +1024,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09347c93fe984f848a02bf77398d98bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderPoints: {fileID: 527766562}
+  renderObject: {fileID: 527766562}
+  linePoint: {fileID: 3087785004293433735, guid: 9a56ddc53250c044e81ccfb3378668f3,
+    type: 3}
+--- !u!114 &1233457661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233457656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc69d1877f5bd4e45b9c94227c8d4f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderObject: {fileID: 527766562}
 --- !u!1001 &1394164186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1129,7 +1160,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 527766563}
+      - m_Target: {fileID: 1233457661}
         m_MethodName: ClearLines
         m_Mode: 1
         m_Arguments:

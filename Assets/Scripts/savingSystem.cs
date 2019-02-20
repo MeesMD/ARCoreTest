@@ -40,7 +40,6 @@ public class savingSystem : MonoBehaviour
     {
         if(File.Exists(Application.dataPath + "/save.txt"))
         {
-
             string saveString = File.ReadAllText(Application.dataPath + "/save.txt");
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
 
