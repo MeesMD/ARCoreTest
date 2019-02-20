@@ -4,8 +4,8 @@ using UnityEngine;
 using GoogleARCore;
 
 #if UNITY_EDITOR
-    // Set up touch input propagation while using Instant Preview in the editor.
-    using Input = GoogleARCore.InstantPreviewInput;
+// Set up touch input propagation while using Instant Preview in the editor.
+using Input = GoogleARCore.InstantPreviewInput;
 #endif
 
 public class trailScript : MonoBehaviour
@@ -13,7 +13,7 @@ public class trailScript : MonoBehaviour
 
     public GameObject prefab;
     public GameObject cam;
-    public List<GameObject> Points = new List<GameObject>();
+    //public List<GameObject> Points = new List<GameObject>();
 
     // Use this for initialization
     void Start()
@@ -30,19 +30,16 @@ public class trailScript : MonoBehaviour
             Vector3 camDir = cam.transform.forward;
             Quaternion camRot = cam.transform.rotation;
             float spawnLineDist = 2;
-            //Debug.Log("Touched" + camPos.x + " " + camPos.y + " " + camPos.z);
             Vector3 spawnPos = camPos + (camDir * spawnLineDist);
             GameObject cur = Instantiate(prefab, spawnPos, camRot);
             cur.transform.SetParent(this.transform);
         }
     }
 
-    public void clearLines()
+    public void ClearLines()
     {
         Debug.Log("Going to clear all lines");
-        LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
-        lineRenderer.SetPosition(0, Vector3.zero);
-        lineRenderer.SetPosition(1, Vector3.zero);
-        Debug.Log("Cleared all lines");
+        
+        Debug.Log("Cleared all lines ");
     }
 }

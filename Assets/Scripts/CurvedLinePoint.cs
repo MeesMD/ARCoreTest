@@ -13,17 +13,16 @@ public class CurvedLinePoint : MonoBehaviour
 		{
 			Gizmos.color = gizmoColor;
 
-			Gizmos.DrawSphere( this.transform.position, gizmoSize );
+			Gizmos.DrawSphere(this.transform.position, gizmoSize);
 		}
 	}
 
 	//update parent line when this point moved
 	void OnDrawGizmosSelected()
 	{
-
 		CurvedLineRenderer curvedLine = this.transform.parent.GetComponent<CurvedLineRenderer>();
 
-		if( curvedLine != null )
+		if( curvedLine != null)
 		{
 			curvedLine.Update();
 		}

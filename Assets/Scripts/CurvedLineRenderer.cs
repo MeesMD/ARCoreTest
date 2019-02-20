@@ -24,14 +24,14 @@ public class CurvedLineRenderer : MonoBehaviour
 		SetPointsToLine();
 	}
 
-	void GetPoints()
+	public void GetPoints()
 	{
 		//find curved points in children
 		linePoints = this.GetComponentsInChildren<CurvedLinePoint>();
 
 		//add positions
 		linePositions = new Vector3[linePoints.Length];
-		for( int i = 0; i < linePoints.Length; i++ )
+		for( int i = 0; i < linePoints.Length; i++)
 		{
 			linePositions[i] = linePoints[i].transform.position;
 		}

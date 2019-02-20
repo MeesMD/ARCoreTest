@@ -17,6 +17,7 @@ public class AppController : MonoBehaviour
 
     void Update()
     {
+        return;
         if(Session.Status != SessionStatus.Tracking)
         {
             return;
