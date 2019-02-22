@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class clearLines : MonoBehaviour
 {
-    public GameObject renderObject;
-
-    private GameObject[] linePoints; 
-
     public void ClearLines()
     {
-        linePoints = renderObject.GetComponentsInChildren<GameObject>();
-        
-        for(int i = 0; i < 1; i++)
+        foreach (Transform child in transform)
         {
-            Destroy(linePoints[i]);
+            GameObject.Destroy(child.gameObject);
         }
-
+        Debug.Log("finished clearing");
     }
-
 }

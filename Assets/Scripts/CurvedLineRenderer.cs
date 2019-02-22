@@ -39,11 +39,11 @@ public class CurvedLineRenderer : MonoBehaviour
 
 	void SetPointsToLine()
 	{
-		//create old positions if they dont match
+		/*//create old positions if they dont match
 		if( linePositionsOld.Length != linePositions.Length )
 		{
 			linePositionsOld = new Vector3[linePositions.Length];
-		}
+		}*/
 
 		//check if line points have moved
 		bool moved = false;

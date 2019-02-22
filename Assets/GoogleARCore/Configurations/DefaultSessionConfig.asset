@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MatchCameraFramerate: 1
   EnablePlaneFinding: 1
-  EnableLightEstimation: 0
+  EnableLightEstimation: 1
